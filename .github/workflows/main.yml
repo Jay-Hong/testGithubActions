@@ -21,9 +21,9 @@ jobs:
       run: |
         pwd
         ls -al
-        
+        if [ -f ildao_result.json ]; then rm -f ildao_result.json; fi
         scrapy crawl ildao_multi -o ildao_result.json -t json
-        
+        cp -fp ildao_result.json ../jobinfoURL.json
       working-directory: ./ildao_test_with_selenium
     
     - name: Commit files
