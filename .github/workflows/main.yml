@@ -2,7 +2,8 @@ name: testGithubAction
 
 on: # [push]
   schedule:
-    - cron: '31 12,20 * * 2,4'
+    # - cron: '33 12 * * 2,5'	# 화, 금 21:33 실행
+    - cron: '55 23 31 2 4'	# 실행되지 않을 것
 
 jobs:
   build:
